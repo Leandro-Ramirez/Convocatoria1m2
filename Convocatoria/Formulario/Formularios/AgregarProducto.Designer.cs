@@ -39,10 +39,12 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.txbDescripcion = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpVendimiento = new System.Windows.Forms.DateTimePicker();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.nudPrecio = new System.Windows.Forms.NumericUpDown();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
@@ -53,7 +55,7 @@
             this.groupBox1.Controls.Add(this.cmbCategoria);
             this.groupBox1.Controls.Add(this.nudPrecio);
             this.groupBox1.Controls.Add(this.nudCantidad);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtpVendimiento);
             this.groupBox1.Controls.Add(this.txbDescripcion);
             this.groupBox1.Controls.Add(this.txbNombre);
             this.groupBox1.Controls.Add(this.lblCategoria);
@@ -156,13 +158,13 @@
             this.txbDescripcion.Size = new System.Drawing.Size(200, 56);
             this.txbDescripcion.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // dtpVendimiento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(223, 285);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 10;
-            this.dateTimePicker1.Value = new System.DateTime(2021, 12, 31, 11, 59, 0, 0);
+            this.dtpVendimiento.Location = new System.Drawing.Point(223, 285);
+            this.dtpVendimiento.Name = "dtpVendimiento";
+            this.dtpVendimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpVendimiento.TabIndex = 10;
+            this.dtpVendimiento.Value = new System.DateTime(2021, 12, 31, 11, 59, 0, 0);
             // 
             // nudCantidad
             // 
@@ -193,14 +195,42 @@
             this.cmbCategoria.Size = new System.Drawing.Size(200, 21);
             this.cmbCategoria.TabIndex = 13;
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.Green;
+            this.btnAceptar.Location = new System.Drawing.Point(267, 402);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(97, 37);
+            this.btnAceptar.TabIndex = 1;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelar.Location = new System.Drawing.Point(370, 402);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(97, 36);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 450);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
             this.Name = "AgregarProducto";
             this.Text = "AgregarProducto";
+            this.Load += new System.EventHandler(this.AgregarProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
@@ -220,11 +250,13 @@
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.NumericUpDown nudPrecio;
         private System.Windows.Forms.NumericUpDown nudCantidad;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpVendimiento;
         private System.Windows.Forms.TextBox txbDescripcion;
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblVencimiento;
         private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -19,11 +19,6 @@ namespace Formulario.Formularios
             InitializeComponent();
         }
 
-        private void LblAcciones_Click(object sender, EventArgs e)
-        {
-
-        }
-
         #region Boton: Registrar
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
@@ -49,6 +44,13 @@ namespace Formulario.Formularios
 
         #region Boton: Visualizar (Actualizar)
         private void BtnVisualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Inecesario
+        private void LblAcciones_Click(object sender, EventArgs e)
         {
 
         }

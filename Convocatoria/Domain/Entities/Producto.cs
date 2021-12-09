@@ -12,7 +12,7 @@ namespace Domain.Entities
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
         public int Existencia { get; set; }
         public DateTime FechaVencimiento{ get; set; }
         public Categoria Categoria { get; set; }
